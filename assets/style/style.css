@@ -3,11 +3,10 @@
     width: 100%;
     min-height: 250px;
     grid-template-areas: 
-    "header header header header"
-    "main main main aside"
-    "footer footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: 20% 1fr 20%;
     font-weight: bold;
     text-align: center;
 }
@@ -18,33 +17,48 @@
 }
 .section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-area: section;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 1rem;
-    justify-items: center;
+    grid-template-areas: 
+    "text"
+    "more"
+    "morebig";
 }
 .main {
     grid-area: main;
     background-color: lightyellow;
     padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+    "section"
+    "aside"
 }
 .aside {
     grid-area: aside;
     background-color: lightgreen;
-    padding-top: 30px;
 }
 .more {
-    width: 350px; 
-    background-color:rgb(231, 206, 80);
-    text-align: center;
-    padding: 20px;
-}
-.more-big{
+    grid-area: more;
     display: grid;
-    grid-column: 1/3;
-    background-color:rgb(231, 206, 80);
+    grid-template-columns: 1fr 1fr;
+    width: 100%; 
     text-align: center;
     padding: 20px;
-    width: 775px; 
+    gap: 1rem;
+}
+.more_more1 {
+    background-color:rgb(231, 206, 80);
+    width: 100%;
+    min-height: 30px;
+}
+.morebig{
+    grid-area: morebig;
+    background-color:rgb(231, 206, 80);
+    text-align: center;
+    padding: 15px;
+    width: 100%; 
 } 
 .footer {
     grid-area: footer;
@@ -59,4 +73,7 @@
     background-color:white;
     text-align: center;
     padding: 20px;
+}
+.text {
+    grid-area: text;
 }
