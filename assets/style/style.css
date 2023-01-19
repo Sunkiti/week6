@@ -1,7 +1,7 @@
 .container {
     display: grid;
     width: 100%;
-    min-height: 250px;
+    min-height: 450px;
     grid-template-areas: 
     "header"
     "main"
@@ -19,21 +19,20 @@
     display: grid;
     grid-area: section;
     grid-template-rows: 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr;
     grid-template-areas: 
     "text"
     "more"
     "morebig";
+    align-items: center;
 }
 .main {
     grid-area: main;
     background-color: lightyellow;
-    padding: 30px;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: 
-    "section"
-    "aside"
+    "section aside" 
 }
 .aside {
     grid-area: aside;
@@ -43,22 +42,18 @@
     grid-area: more;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 100%; 
     text-align: center;
     padding: 20px;
     gap: 1rem;
 }
 .more_more1 {
     background-color:rgb(231, 206, 80);
-    width: 100%;
     min-height: 30px;
 }
 .morebig{
     grid-area: morebig;
     background-color:rgb(231, 206, 80);
-    text-align: center;
-    padding: 15px;
-    width: 100%; 
+    min-height: 30px;
 } 
 .footer {
     grid-area: footer;
@@ -69,7 +64,6 @@
     align-content: space-around;
 }
 .section1 {
-    border: 1px black;
     background-color:white;
     text-align: center;
     padding: 20px;
